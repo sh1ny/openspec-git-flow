@@ -1,0 +1,6 @@
+schema: spec-driven
+
+context: |
+  MANDATORY: Invoke the 'openspec-git-branch' skill immediately when a new OpenSpec change is started (/opsx:new, /opsx:propose, /opsx:ff, openspec-new-change, openspec-propose, openspec-ff-change) — BEFORE 'openspec new change' runs or any change file is created.
+  MANDATORY: Invoke the 'openspec-git-commit' skill immediately when the OpenSpec apply phase begins (/opsx:apply, openspec-apply-change, 'openspec instructions apply').
+  MANDATORY: Invoke the 'openspec-git-merge' skill immediately after the OpenSpec archive workflow completes (/opsx:archive, openspec-archive-change, 'openspec archive').
