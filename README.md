@@ -1,6 +1,6 @@
 # openspec-git-flow
 
-A standalone bundle repo that extends [OpenSpec](https://github.com/Fission-AI/OpenSpec) with a git branch / commit / merge workflow. Same build and install model as the sibling [`openspec-plus`](https://github.com/sudokar/openspec-plus) bundle: parallel auto-activating `SKILL.md` files dropped into a coding agent's skills directory, plus three `context:` lines merged into the project's `openspec/config.yaml`. No OpenSpec core changes; state flows between skills through git itself (the current branch name carries `<prefix>/<change-name>`).
+A standalone bundle that extends [OpenSpec](https://github.com/Fission-AI/OpenSpec) with a git branch / commit / merge workflow. It ships as parallel auto-activating `SKILL.md` files dropped into a coding agent's skills directory, plus three `context:` lines merged into the project's `openspec/config.yaml`. No OpenSpec core changes; state flows between skills through git itself (the current branch name carries `<prefix>/<change-name>`).
 
 ## What it enforces
 
@@ -236,3 +236,9 @@ To remove the bundle:
 2. Remove the three MANDATORY `context:` lines (the ones naming `openspec-git-branch`, `openspec-git-commit`, `openspec-git-merge`) from `openspec/config.yaml`. Leave all other content intact.
 3. Optionally remove `openspec/.git-flow/VERSION`.
 4. Restart your coding agent.
+
+---
+
+## 💡 Inspiration
+
+The build and install model — parallel auto-activating `SKILL.md` files plus a `context:` merge into `openspec/config.yaml` — is inspired by [`openspec-plus`](https://github.com/sudokar/openspec-plus), which applies the same pattern to enforce disciplined proposal/spec/design/tasks authoring. This bundle applies the pattern to a different concern (git workflow) and is independent of it; the two can be installed side by side.
